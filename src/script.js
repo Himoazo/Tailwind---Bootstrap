@@ -1,4 +1,5 @@
 "use strict";
+
 addEventListener("DOMContentLoaded", loadData); //Read data onload
 
 const tailTable = document.getElementById("tail"); 

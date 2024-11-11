@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./input.css" type="text/css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
     <title>Tailwind</title>
 </head>
 <body class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-    <header class="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600">
+    <header class="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 h-12">
         <nav>
             <div class="flex flex-col items-center md:flex-row md:items-start px-4">
                 <div>
@@ -16,9 +16,9 @@
                 </div>
                 <div class="flex-grow md:flex md:justify-center w-full md:w-auto mt-4 md:mt-0">
                     <ul class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-                        <li><a href="index.html">Hem</a></li>
-                        <li><a href="tailwind.html">Tailwind</a></li>
-                        <li><a href="bootstrap.html">Bootstrap</a></li>
+                        <li><a href="index.html" class="hover:bg-indigo-500 hover:text-white rounded px-2 py-1">Hem</a></li>
+                        <li><a href="tailwind.html" class="hover:bg-indigo-500 hover:text-white rounded px-2 py-1">Tailwind</a></li>
+                        <li><a href="bootstrap.html" class="hover:bg-indigo-500 hover:text-white rounded px-2 py-1">Bootstrap</a></li>
                     </ul>
                 </div>
             </div>
@@ -26,7 +26,7 @@
     </header>     
     
     <main>
-        <div class="my-5 m-auto w-full md:w-2/3">
+        <div class="my-5 m-auto w-full md:w-2/3 bg-white rounded-lg shadow-xl p-4">
             <h2 class="text-center text-l font-bold"> Tailwind </h2>
             <p>Tailwind CSS är ett CSS-ramverk som tillhandahåller en uppsättning fördefinierade klasser för att snabbt bygga 
                 skräddarsydda användargränssnitt. Tailwind gör att utvecklare kan skapa komplexa designs genom att kombinera flera verktygsklasser. 
@@ -35,18 +35,18 @@
                 Till skillnad från andra ramverk,så har inte Tailwind en serie fördefinierade klasser för 
                 element som knappar eller tabeller. Istället skapar den en lista med "hjälpmedel" CSS-klasser som kan användas 
                 för att styla varje element genom att mixa och matcha. <br><br>
-                Tailwinds officiella webbplats: <a href="https://tailwindcss.com/">Tailwind</a>
+                Tailwinds officiella webbplats: <a href="https://tailwindcss.com/" class="text-blue-700">Tailwind</a>
             </p>
         </div>
         <div class="my-10">
             <table id="tail" class="table-auto m-auto w-full md:w-2/3 shadow-xl">
                 <thead>
                   <tr class="bg-blue-200">
-                    <th class="">Ramverk</th>
-                    <th class="">Typ</th>
-                    <th class="">Språk</th>
-                    <th class="">Område</th>
-                    <th class="">ta bort</th>
+                    <th>Ramverk</th>
+                    <th>Typ</th>
+                    <th>Språk</th>
+                    <th>Område</th>
+                    <th>ta bort</th>
                   </tr>
                 </thead>
                 <tbody class="table-auto text-center bg-blue-50">

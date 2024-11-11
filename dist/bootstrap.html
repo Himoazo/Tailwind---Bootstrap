@@ -1,1 +1,83 @@
-<script src="/bootstrap.b91d7f22.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="/index.b2d9cf43.css">
+    <script src="/index.4d6bcbeb.js" defer=""></script>
+</head>
+<body>
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div>
+                    <h1 id="logo" class="navbar-brand">Bootstrap</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Hem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/tailwind.html">Tailwind</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/bootstrap.html">Bootstrap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>  
+
+    <main>
+        <div>
+            <table id="tail">
+                <thead>
+                  <tr>
+                    <th>Ramverk</th>
+                    <th>Typ</th>
+                    <th>Språk</th>
+                    <th>Område</th>
+                    <th>ta bort</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+        </div>
+
+        <form onsubmit="formData(event)">
+            <div class="mb-4">
+              <label for="frameWork">Ramverk</label>
+              <input type="text" id="frameWork" name="frameWork" placeholder="Ramverk">
+            </div>
+            <div class="mb-4">
+              <label for="type">Typ</label>
+              <select name="type" id="type">
+                <option value="fronend">Frontend</option>
+                <option value="backend">Backend</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="lang">Språk</label>
+              <input type="text" name="lang" id="lang" placeholder="Ramverkets språk">
+            </div>
+            <div class="mb-4">
+              <label for="usage">Område</label>
+              <textarea name="usage" id="usage" placeholder="Användnings område"></textarea>
+            </div>
+            <div class="mb-4">
+              <input type="checkbox" name="accept" id="accept">
+              <label for="accept">Jag accepterar att publicera dess uppgifter i tabellen ovan</label>
+            </div>
+            <div class="text-center">
+              <input type="submit" value="Spara">
+            </div>
+          </form>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
