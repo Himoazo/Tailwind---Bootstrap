@@ -12,11 +12,7 @@ function loadData() {
     const tbody = tailTable.querySelector("tbody");
     tbody.innerHTML = ""; 
 
-    frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
-
-    if (frameArr == null) {
-        return;
-    }
+    frameArr = JSON.parse(localStorage.getItem("frameworkArr")) || []; // Get data from localStorage
 
     //Print data into tabel
     for (let [index, item] of frameArr.entries()) {

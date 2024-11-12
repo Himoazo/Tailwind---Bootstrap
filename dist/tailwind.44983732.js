@@ -1,8 +1,5 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", ()=>{
-    loadData(); //Read data onload
-    document.getElementById("fwForm").addEventListener("submit", formData); // call formData on submit
-});
+addEventListener("DOMContentLoaded", loadData); //Read data onload
 const tailTable = document.getElementById("tail");
 let frameArr = [];
 //load saved rows
@@ -10,8 +7,7 @@ function loadData() {
     frameArr = [];
     const tbody = tailTable.querySelector("tbody");
     tbody.innerHTML = "";
-    frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
-    if (frameArr.length == 0) return;
+    frameArr = JSON.parse(localStorage.getItem("frameworkArr")) || []; // Get data from localStorage
     //Print data into tabel
     for (let [index, item] of frameArr.entries()){
         const tr = tbody.insertRow();

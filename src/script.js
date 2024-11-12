@@ -1,10 +1,6 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-    loadData(); //Read data onload
-    document.getElementById("fwForm").addEventListener("submit", formData); // call formData on submit
-});
-
+addEventListener("DOMContentLoaded", loadData); //Read data onload
 
 const tailTable = document.getElementById("tail"); 
 
@@ -12,24 +8,20 @@ let frameArr = [];
 
 //load saved rows
 function loadData() {
-    
     frameArr = [];  
     const tbody = tailTable.querySelector('tbody');
     tbody.innerHTML = ""; 
 
-    frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
+    frameArr = JSON.parse(localStorage.getItem("frameworkArr")) || []; // Get data from localStorage
 
-    if (frameArr.length == null) {
-        return;
-    }
-
-    //Print data into tabel
+     //Print data into tabel
     for (let [index, item] of frameArr.entries()) {
         const tr = tbody.insertRow();
         tr.insertCell(0).textContent = item.frameName;
         tr.insertCell(1).textContent = item.type;
         tr.insertCell(2).textContent = item.language;
         tr.insertCell(3).textContent = item.usage;
+
         
         //Delete button
         const newBtn = document.createElement("button");
@@ -71,7 +63,7 @@ function formData(event) {
         language: langFromForm,
         usage: usageFromForm
     }
-
+    
     frameArr.push(frameObj);
 
     //Save and load data
