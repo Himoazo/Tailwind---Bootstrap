@@ -9,7 +9,7 @@ function loadData() {
     tbody.innerHTML = "";
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
     //Print data into tabel
-    for (let [index, item] of frameArr.entries()){
+    if (frameArr.length > 0) for (let [index, item] of frameArr.entries()){
         const tr = tbody.insertRow();
         tr.insertCell(0).textContent = item.frameName;
         tr.insertCell(1).textContent = item.type;

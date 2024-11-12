@@ -9,16 +9,12 @@ function loadData() {
     tbody.innerHTML = "";
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
     //Print data into tabel
-    for (let [index, item] of frameArr.entries()){
+    if (frameArr.length > 0) for (let [index, item] of frameArr.entries()){
         const tr = tbody.insertRow();
         tr.insertCell(0).textContent = item.frameName;
-        //tr.insertCell(0).classList.add("bg-white");
         tr.insertCell(1).textContent = item.type;
-        //tr.insertCell(1).classList.add("bg-white");
         tr.insertCell(2).textContent = item.language;
-        //tr.insertCell(2).classList.add("bg-white");
         tr.insertCell(3).textContent = item.usage;
-        //tr.insertCell(3).classList.add("bg-white");
         //Delete button
         const newBtn = document.createElement("button");
         newBtn.classList.add("deleteRowBtn", "bg-red-500", "hover:bg-red-700", "text-white", "font-bold", "py-1", "px-2", "rounded");
