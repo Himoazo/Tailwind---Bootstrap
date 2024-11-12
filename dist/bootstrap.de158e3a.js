@@ -4,12 +4,13 @@ const tailTable = document.getElementById("boot");
 let frameArr = [];
 //load saved rows
 function loadData() {
+    if (frameArr.length == 0) return;
     frameArr = [];
     const tbody = tailTable.querySelector("tbody");
     tbody.innerHTML = "";
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
     //Print data into tabel
-    if (frameArr != null) for (let [index, item] of frameArr.entries()){
+    for (let [index, item] of frameArr.entries()){
         const tr = tbody.insertRow();
         tr.insertCell(0).textContent = item.frameName;
         tr.insertCell(1).textContent = item.type;
