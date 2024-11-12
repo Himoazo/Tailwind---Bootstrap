@@ -19,7 +19,7 @@ function loadData() {
 
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
 
-    if (frameArr.length == 0) {
+    if (frameArr.length == null) {
         return;
     }
 

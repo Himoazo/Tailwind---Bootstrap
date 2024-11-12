@@ -14,10 +14,10 @@ function loadData() {
 
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
 
-    if (frameArr.length == 0) {
+    if (frameArr == null) {
         return;
     }
-    
+
     //Print data into tabel
     for (let [index, item] of frameArr.entries()) {
         const tr = tbody.insertRow();
