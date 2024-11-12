@@ -1,17 +1,15 @@
 "use strict"
-import * as bootstrap from 'bootstrap'
-
 
 addEventListener("DOMContentLoaded", loadData); //Read data onload
 
-const tailTable = document.getElementById("tail"); 
+const tailTable = document.getElementById("boot"); 
 
 let frameArr = [];
 
 //load saved rows
 function loadData() {
     frameArr = [];  
-    const tbody = tailTable.querySelector('tbody');
+    const tbody = tailTable.querySelector("tbody");
     tbody.innerHTML = ""; 
 
     frameArr = JSON.parse(localStorage.getItem("frameworkArr")); // Get data from localStorage
@@ -26,7 +24,7 @@ function loadData() {
         
         //Delete button
         const newBtn = document.createElement("button");
-        newBtn.classList.add("deleteRowBtn");
+        newBtn.classList.add("btn", "btn-danger"); 
         newBtn.value = index;
         newBtn.textContent = "X";
         const btn = tr.insertCell(4);

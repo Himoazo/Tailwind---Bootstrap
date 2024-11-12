@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./input.css" type="text/css" rel="stylesheet">
-    <script src="script.js" type="module" defer></script>
+    <script src="script.js" defer></script>
     <title>Tailwind</title>
 </head>
 <body class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
@@ -34,8 +34,13 @@
                 populärt val för modern frontend-utveckling. <br>
                 Till skillnad från andra ramverk,så har inte Tailwind en serie fördefinierade klasser för 
                 element som knappar eller tabeller. Istället skapar den en lista med "hjälpmedel" CSS-klasser som kan användas 
-                för att styla varje element genom att mixa och matcha. <br><br>
-                Tailwinds officiella webbplats: <a href="https://tailwindcss.com/" class="text-blue-700">Tailwind</a>
+                för att styla varje element genom att mixa och matcha. <br>
+                Tailwinds officiella webbplats: <a href="https://tailwindcss.com/" class="text-blue-700">Tailwind</a> <br><br>
+            </p>
+            <p>
+              <strong>Fördelen</strong> med att använda Tailwind för att style:a denna sida har varit effektiviteten. På korttid, genom att söka genom Tailwinds dokumentation, 
+              har jag kunnat styla sidans komponenter utan att behöva skriva CSS-kod själv. <br>
+              <strong>Nackdelen</strong> med det var att det är en hel del Tailwinds klasser i HTML-koden som får HTML-koden att bli nästan oläsbar. 
             </p>
         </div>
         <div class="my-10">
@@ -55,7 +60,7 @@
               </table>
         </div>
 
-        <form onsubmit="formData(event)" class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-10">
+        <form action="#" onsubmit="formData(event)" class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto my-10">
             <div class="mb-4">
               <label for="frameWork" class="block text-gray-700 font-bold mb-2">Ramverk</label>
               <input type="text" id="frameWork" name="frameWork" placeholder="Ramverk" class="border rounded-lg py-2 px-3 w-full">
@@ -84,8 +89,8 @@
             </div>
           </form>
     </main>
-    <footer>
-
+    <footer class="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 text-center py-4 mt-6">
+      <p class="text-gray-700 text-sm">Fullstack-utveckling med ramverk, DT193G</p>
     </footer>
 </body>
 </html>
