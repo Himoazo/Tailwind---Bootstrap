@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAIA","sources":["src/style.scss"],"sourcesContent":["#text{\r\n    width: fit-content;\r\n}\r\n\r\np{\r\n    max-width: 75ch;\r\n}"],"names":[],"version":3,"file":"index.b2d9cf43.css.map","sourceRoot":"/__parcel_source_root/"}

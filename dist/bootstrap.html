@@ -23,6 +23,7 @@
                         <li class="nav-item"><a class="nav-link" href="/index.html">Hem</a></li>
                         <li class="nav-item"><a class="nav-link" href="/tailwind.html">Tailwind</a></li>
                         <li class="nav-item"><a class="nav-link" href="/bootstrap.html">Bootstrap</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/deploy.html">Publicering</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +69,7 @@
         <form action="#" onsubmit="formData(event)" class="p-3 col-12 col-md-6 m-auto border border-3 rounded shadow mb-5 bg-body">
             <div class="mb-3">
                 <label class="form-label" for="frameWork">Ramverk</label>
-                <input type="text" class="form-control" id="frameWork" name="frameWork" placeholder="Ramverk">
+                <input type="text" class="form-control" id="frameWork" name="frameWork" placeholder="Ramverk" required="">
             </div>
             <div class="mb-3">
                 <label for="type" class="form-label">Typ</label>
@@ -79,11 +80,11 @@
             </div>
             <div class="mb-3">
                 <label for="lang" class="form-label">Språk</label>
-                <input type="text" class="form-control" name="lang" id="lang" placeholder="Ramverkets språk">
+                <input type="text" class="form-control" name="lang" id="lang" placeholder="Ramverkets språk" required="">
             </div>
             <div class="mb-3">
                 <label for="usage" class="form-label">Område</label>
-                <textarea name="usage" id="usage" class="form-control" placeholder="Användnings område"></textarea>
+                <textarea name="usage" id="usage" class="form-control" placeholder="Användnings område. Max 20 tecken" maxlength="20" required=""></textarea>
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" name="accept" id="accept" class="form-check-input">

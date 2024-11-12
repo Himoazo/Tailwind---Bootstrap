@@ -31,7 +31,7 @@ function loadData() {
         
         //Delete button
         const newBtn = document.createElement("button");
-        newBtn.classList.add("deleteRowBtn");
+        newBtn.classList.add("deleteRowBtn", "bg-red-500", "hover:bg-red-700", "text-white", "font-bold", "py-1", "px-2", "rounded");
         newBtn.value = index;
         newBtn.textContent = "X";
         const btn = tr.insertCell(4);
