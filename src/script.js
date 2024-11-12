@@ -1,6 +1,10 @@
 "use strict";
 
-addEventListener("DOMContentLoaded", loadData); //Read data onload
+document.addEventListener("DOMContentLoaded", () => {
+    loadData(); //Read data onload
+    document.getElementById("fwForm").addEventListener("submit", formData); // call formData on submit
+});
+
 
 const tailTable = document.getElementById("tail"); 
 
@@ -18,7 +22,7 @@ function loadData() {
     if (frameArr.length == 0) {
         return;
     }
-    
+
     //Print data into tabel
     for (let [index, item] of frameArr.entries()) {
         const tr = tbody.insertRow();

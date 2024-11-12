@@ -1,5 +1,8 @@
 "use strict";
-addEventListener("DOMContentLoaded", loadData); //Read data onload
+document.addEventListener("DOMContentLoaded", ()=>{
+    loadData(); //Read data onload
+    document.getElementById("fwForm").addEventListener("submit", formData); // call formData on submit
+});
 const tailTable = document.getElementById("tail");
 let frameArr = [];
 //load saved rows
