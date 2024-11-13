@@ -1,6 +1,9 @@
 "use strict";
 
 addEventListener("DOMContentLoaded", loadData); //Read data onload
+window.onload = () => {
+    document.getElementById("theForm").addEventListener("submit", formData);
+}
 
 const tailTable = document.getElementById("tail"); 
 
