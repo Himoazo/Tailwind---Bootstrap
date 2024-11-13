@@ -51,7 +51,7 @@ let frameObj = {
 //Add rows to table
 function formData(event) {
     event.preventDefault(); 
-    
+    console.log("formData was called");
     let nameFromForm = document.getElementById("frameWork").value;
     let typeFromForm = document.getElementById("type").value;
     let langFromForm = document.getElementById("lang").value;
